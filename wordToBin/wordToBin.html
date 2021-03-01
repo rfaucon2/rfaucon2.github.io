@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="wordToBin.js"></script>
+    <link rel="stylesheet" href="wordToBin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextToBin</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="links">
+            <div class="first"><a href="../index.html">Home</a></div>
+            <div class="second"><a href="../binToWord/binToWord.html">Binary to text</a></div>
+            <div class="third"><a href="../decToBin/decToBin.html">Decimal to binary</a></div>
+            <div class="fourth"><a href="../binToDec/binToDec.html">Binary to decimal</a></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <span class="qch"></span>
+            <div class="content">
+                <div class="description">
+                    <h1>Description</h1>
+                </div>
+
+                <div class="input">                    
+                    <h1>Input</h1>
+                    <textarea name="input" id="input" cols="30" rows="10"></textarea> 
+                    <input style="visibility: hidden;" id="submitButton" type="button" onclick="printvalue()" value="Submit"/>
+                    <div class="spaces">
+                        <input type="checkbox" name="doSpace" id="doSpace" checked>
+                        <label for="doSpace">spaces between bytes</label>
+                    </div>
+                </div>
+                
+                <div class="output">
+                    <h1>Output</h1>
+                    <textarea name="output" id="output" cols="30" rows="10"></textarea>
+                </div>
+                
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        var input = document.getElementById("input");
+
+        input.addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("submitButton").click();
+            }
+        });
+    </script>
+    
+</body>
+</html>

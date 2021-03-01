@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+body
+{
+    background: #111;
+}
+
+.topbar
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.topbar::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.topbar::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+    filter: blur(25px);
+}
+
+.topbar .links
+{
+    z-index: 3;
+    margin-top: 10px;
+}
+
+.topbar .links div
+{
+    padding: 15px;
+    margin: 15px;    
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.topbar .links div:hover   
+{
+    transform: translateY(-10px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.topbar .links div a
+{
+    color :whitesmoke;
+    font-size: 25px;
+}
+
+.container
+{
+    min-height: 100ch;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.container .card
+{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+.container .card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .card::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+    filter: blur(30px);
+}
+.container .card .qch
+{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.container .card .qch::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.container .card .content
+{
+    position: absolute;
+    z-index: 3;
+    padding: 20px 40px;
+    top: 0px;
+}
+
+.container .card .content textarea
+{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.container .card .content .output
+{
+    margin-top: 10%;
+}
